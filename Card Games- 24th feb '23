@@ -1,0 +1,25 @@
+#include <bits/stdc++.h> // header file includes every Standard library
+using namespace std;
+int main() {
+map<int, int> freq; // map to count the frequency of each number
+int card;
+for (int i = 0; i < 5; i++) {
+cin >> card;
+freq[card]++;
+}
+bool three_of_a_kind = false;
+bool pair = false;
+for (auto it = freq.begin(); it != freq.end(); it++) {
+if (it->second == 3) { // found a three of a kind
+three_of_a_kind = true;
+} else if (it->second == 2) { // found a pair
+pair = true;
+}
+}
+if (three_of_a_kind && pair) {
+cout << "Yes" << endl;
+} else {
+cout << "No" << endl;
+}
+    return 0;
+}
