@@ -1,0 +1,13 @@
+#include <iostream>
+#include <iomanip> // for setw() function
+using namespace std;
+
+int main() {
+    int k;
+    cin >> k;
+    int hours = (21 + (k / 60)) % 24; // calculate the hours
+    int minutes = k % 60; // calculate the minutes
+    cout << setw(2) << setfill('0') << hours << ":" // set the width to 2 and fill with '0' if necessary
+         << setw(2) << setfill('0') << minutes << endl; // same for minutes
+    return 0;
+}
