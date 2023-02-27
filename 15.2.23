@@ -1,0 +1,16 @@
+#include <bits/stdc++.h> // header file includes every Standard library
+using namespace std;
+
+int main() {
+	// Your code here
+    int A, B;
+    cin >> A >> B;
+    int sockets = 1;
+    int cords = 0;
+    while(sockets<B){
+        cords++;
+        sockets=sockets-1+A;
+    }
+    cout<<cords;
+    return 0;
+}
