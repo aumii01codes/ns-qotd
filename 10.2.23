@@ -1,0 +1,13 @@
+#include <bits/stdc++.h> // header file includes every Standard library
+using namespace std;
+
+int main() {
+    int A, B, C, K;
+    cin >>A >>B>>C>>K;
+    int ans=min(K,A);
+    K=max(K-A,0);
+    K=max(K-B,0);
+    ans=ans-K;
+    cout<<ans;
+    return 0;
+}
