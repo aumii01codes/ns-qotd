@@ -1,0 +1,39 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n, count = 0;
+    cin >> n;
+
+    for (int i = 1; i <= n; i++) {
+        int temp = i;
+        bool flag = true;
+
+        while (temp > 0) {
+            if (temp % 10 == 7) {
+                flag = false;
+                break;
+            }
+            temp /= 10;
+        }
+
+        if (flag) {
+            temp = i;
+            while (temp > 0) {
+                if (temp % 8 == 7) {
+                    flag = false;
+                    break;
+                }
+                temp /= 8;
+            }
+        }
+
+        if (flag) {
+            count++;
+        }
+    }
+
+    cout << count << endl;
+
+    return 0;
+}
