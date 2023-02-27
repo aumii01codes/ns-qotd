@@ -1,0 +1,13 @@
+#include <iostream>
+#include <string>
+
+int is_prefix(const std::string &S, const std::string &T) {
+    return T.find(S) == 0;
+}
+
+int main() {
+    std::string S, T;
+    std::cin >> S >> T;
+    std::cout << (is_prefix(S, T) ? "Yes" : "No") << std::endl;
+    return 0;
+}
