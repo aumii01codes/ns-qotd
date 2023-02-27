@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+int main() {
+    long count = 0L; //count of red balls
+    int ans = 0;
+    long A, B, C, D;
+    cin>>A>>B>>C>>D;
+    if (B >= C * D) {
+        ans = -1;
+    } else {
+        while (count * D < A) {
+            A += B;
+            count += C;
+            ans++;
+        }
+    }
+    cout<<ans;
+    return 0;
+}
