@@ -1,0 +1,17 @@
+#include <bits/stdc++.h>
+using namespace std;
+string shift_alphabet(string s, int n) {
+    for (int i = 0; i < s.length(); i++) {
+        char c = s[i];
+        c = (c - 'A' + n) % 26 + 'A';
+        s[i] = c;
+    }
+    return s;
+}
+int main() {
+    int n;
+    string s;
+    cin >> n >> s;
+    cout << shift_alphabet(s, n) << endl;
+    return 0;
+}
