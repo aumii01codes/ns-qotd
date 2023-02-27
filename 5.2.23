@@ -1,0 +1,12 @@
+#include <bits/stdc++.h> // header file includes every Standard library
+using namespace std;
+
+int main() {
+	// Your code here
+    long long int n;
+    int k;
+    cin >> n >> k;
+    int digits = log10(n) / log10(k) + 1;
+    cout << digits << endl;
+    return 0;
+}
