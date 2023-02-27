@@ -1,0 +1,16 @@
+#include <bits/stdc++.h> // header file includes every Standard library
+using namespace std;
+
+int main() {
+    int A[26];
+    for (int i = 0; i < 26; i++) {
+        cin >> A[i];
+    }
+    string s = "abcdefghijklmnopqrstuvwxyz";
+    string conv;
+    for (int i = 0; i < 26; i++) {
+        conv =conv+s[A[i]-1];
+    }
+    cout<< conv <<endl;
+    return 0;
+}
