@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+   long long int a, b, k;
+   int shout_count = 0;
+    cin >> a >> b >> k;
+
+  while (a < b) {
+        a *= k;
+        shout_count++;
+    }
+    cout << shout_count;
+    return 0;
+}
