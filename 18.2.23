@@ -1,0 +1,24 @@
+#include <bits/stdc++.h> // header file includes every Standard library
+using namespace std;
+
+int main() {
+	int p, q, r;
+	cin>>p>>q>>r;
+	int sum;
+	
+	if ((p+q)<=(q+r) && (p+q)<=(r+p)) {
+		sum=p+q;
+	}
+	
+	else if ((q+r)<=(p+q) && (q+r)<=(r+p)) {
+		sum=q+r;
+	}
+	
+	else {
+		sum=r+p;
+	}
+	
+	cout<< sum;
+	
+	return 0;
+}
