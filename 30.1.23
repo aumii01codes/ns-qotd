@@ -1,0 +1,12 @@
+#include <bits/stdc++.h> // header file includes every Standard library
+using namespace std;
+
+int main() {
+	int a, b;
+    cin >> a >> b;
+    int c=a&b;
+    int d= a^b;
+	int sum=c+d;
+	cout<<sum;    
+    return 0;
+}
