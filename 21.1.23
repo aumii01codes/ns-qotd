@@ -1,0 +1,17 @@
+#include <iostream>
+#include <cstdio>
+using namespace std;
+
+int main() {
+    long long N, K;
+    cin >> N >> K;
+    if (K % 2 == 0) {
+        long long a = N / K;
+        long long b = (N + (K / 2)) / K;
+        cout << a*a*a + b*b*b << endl;
+    } else {
+        long long a = N / K;
+        cout << a*a*a << endl;
+    }
+    return 0;
+}
