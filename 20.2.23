@@ -1,0 +1,26 @@
+#include <bits/stdc++.h> // header file includes every Standard library
+using namespace std;
+
+int main() {
+	int abc;
+	cin>>abc;
+	
+	int n3 = abc % 10;
+	abc = abc / 10;
+	
+	int n2 = abc % 10;
+	abc = abc / 10;
+	
+	int n1 = abc;
+	
+	
+	int fig1 = (n1*100) + (n2*10) + n3;
+	int fig2 = (n2*100) + (n3*10) + n1;
+	int fig3 = (n3*100) + (n1*10) + n2;
+	
+	int sum = fig1 + fig2 + fig3;
+	
+	cout<<sum;
+	
+	return 0;
+}
