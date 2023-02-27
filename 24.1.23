@@ -1,0 +1,54 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+    int x, y, z, ans = 0;
+    cin >> x >> y >> z;
+
+    if (x > 0 && y < 0) {
+    ans = x;
+    }
+
+    else if (x < 0 && y > 0) {
+    ans = abs(x);
+    }
+    
+    else if (x > 0 && y > 0 && y < x && z < y)
+    {
+        if (z < 0) {
+        ans = 2 * abs(z);
+        ans = ans + x;
+        }
+        
+        else if (z >= 0) {
+        ans = ans + x;
+        }
+    }
+
+    else if (x < 0 && y < 0 && y > x && z > y)
+    {
+        if (z > 0) {
+        ans = 2 * z;
+        ans = ans + abs(x);
+        }
+        else {
+        ans = ans + abs(x);
+        }
+    }
+    
+    else if (x > 0 && y > 0 && y > x) {
+    ans = x;
+    }
+    
+    else if (x < 0 && y < 0 && y < x) {
+    ans = abs(x);
+    }
+    
+    else {
+    ans = -1;
+    }
+
+    cout << ans << endl;
+    return 0;
+}
