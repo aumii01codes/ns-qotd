@@ -1,0 +1,41 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main() {
+    int a, b, c; //a,b,c are time taken to travel x-y, y-z, x-z respectively
+	cin>>a>>b>>c;
+	int time;
+	
+	if (a<b &&a<c) { //a is smallest
+		if (b<c) { //b
+			time= a+b;
+ft		}
+		
+		else { //c
+			time=a+c;
+		}		
+	}
+	
+	else if (b<a &&b<c) { //b is smallest
+		if (a<c) { //a 
+			time=b+a;
+		} 
+		
+		else { //c
+			time=b+c;
+		}
+	}
+	
+	else { //c is smallest
+		if (a<b) { // a
+			time=c+a;
+		}
+		
+		else { //b
+			time=c+b;
+		}
+	}
+	
+	cout<<time;
+	
+    return 0;
+}
