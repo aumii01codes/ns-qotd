@@ -1,0 +1,18 @@
+#include <bits/stdc++.h> // header file includes every Standard library
+using namespace std;
+
+int main() {
+	int A, B; //a- socket in each excord, //b- total sockets needed in house
+    int socket=1;
+    int excord=0;
+
+    cin>>A>>B;
+
+    while (socket<B) {
+        excord++;
+        socket=socket-1+A;
+    }
+
+    cout<<excord;
+    return 0;
+}
