@@ -1,0 +1,11 @@
+#include <bits/stdc++.h> // header file includes every Standard library
+using namespace std;
+
+int main() {
+	string P, Q, Z;
+	cin>>P;
+    cin>>Q;
+    Z=Q+P;
+	cout<<Z;
+    return 0;
+}
