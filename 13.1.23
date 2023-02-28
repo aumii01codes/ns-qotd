@@ -1,0 +1,26 @@
+#include <iostream>
+
+int main() {
+    int n;
+    std::cin >> n;
+
+    if (n <= 1) n = 2;
+    else if (n == 2) {
+        std::cout << "2" << std::endl;
+        return 0;
+    }
+    else if (n % 2 == 0) n++;
+
+    for (;;n+=2) {
+        for (int i = 3; i*i <= n; i += 2) {
+            if (n%i == 0) {
+                goto next_iteration;
+            }
+        }
+        std::cout << n << std::endl;
+        break;
+        next_iteration:;
+    }
+
+    return 0;
+}
