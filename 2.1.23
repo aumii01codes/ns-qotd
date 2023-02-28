@@ -1,0 +1,18 @@
+#include <bits/stdc++.h> // header file includes every Standard library
+using namespace std;
+
+int main() {
+int A;
+string S;
+cin>>A;
+cin>>S;
+
+if (A<3200) {
+    cout<<"red";
+}
+
+else {
+    cout<<S;
+}
+    return 0;
+}
