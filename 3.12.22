@@ -1,0 +1,10 @@
+#include <bits/stdc++.h> // header file includes every Standard library
+using namespace std;
+
+int main() {
+	long long int A, B;
+	cin>>A;
+	B=A^2;
+	cout<<B;
+    return 0;
+}
