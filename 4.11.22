@@ -1,0 +1,42 @@
+#include <bits/stdc++.h> // header file includes every Standard library
+using namespace std;
+
+int main() {
+	int i, j, k;
+	cin>> i>> j>> k;
+	int a, b;
+
+	if (k%2==0) {
+		a= abs(i);
+		b= abs(j);
+	
+	if (a < b) {
+		cout<<"<";
+	}
+
+	else if (a > b){
+	 	cout<<">";
+	}
+
+	else {
+		cout<<"=";
+	}		
+	}
+
+	else {
+
+	if (i < j) {
+		cout<<"<";
+	}
+
+	else if (i > j){
+	 	cout<<">";
+	}
+
+	else {
+		cout<<"=";
+	}
+}
+
+    return 0;
+}
