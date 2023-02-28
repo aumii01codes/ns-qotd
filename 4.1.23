@@ -1,0 +1,33 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define int long long
+
+signed main(){
+
+    int n;
+    cin >> n;
+    map<string,int> mpp;
+
+while(n--){
+
+        string s;
+        cin >> s;
+
+// sorting
+        sort(s.begin(), s.end());
+
+// storing in hashmap
+        mpp[s]++;
+}
+
+    int cnt = 0;
+
+    for(auto &it : mpp){
+        
+// using formula (n * n-1)/2
+        cnt = cnt + ((it.second * (it.second-1))/2);
+    }
+
+    cout<< cnt;
+
+}
