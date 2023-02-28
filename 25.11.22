@@ -1,0 +1,28 @@
+#include <bits/stdc++.h> // header file includes every Standard library
+using namespace std;
+
+int main() {
+	int n, i;
+    unsigned long long int z= pow (10,18);
+    unsigned long long int pro=1;
+    cin>>n; //total element in array
+    int a[n];
+
+    for(i=0; i<n; i++) {
+    	cin>>a[n];
+	}
+
+	for(i=0; i<n; i++) {
+    	pro = pro*a[n];
+	}
+	
+	if (pro>z) {
+		cout<<"-1";
+	}
+	
+	else {
+		cout<<pro;
+	}
+
+    return 0;
+}
