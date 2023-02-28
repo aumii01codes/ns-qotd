@@ -1,0 +1,13 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    long A, B, K;
+    cin>>A>>B>>K;
+	long z=0;
+    long N = max(A - K, z);
+    long E = max(B - max(z, K - A), z);
+
+    cout<<N<<" "<<E;
+    return 0;
+}
