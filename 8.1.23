@@ -1,0 +1,40 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    // Number of weights
+    int N;
+    cin >> N;
+
+    // Weights array
+    int weights[N];
+    for (int i = 0; i < N; i++) {
+        cin >> weights[i];
+    }
+
+    // Initialize minimum absolute difference to a large value
+    int min_diff = INT_MAX;
+
+    // Iterate through all possible values of X
+    for (int X = 1; X <= N - 1; X++) {
+        // Calculate the sum of weights with index not more than X
+        int sum1 = 0;
+        for (int i = 0; i < X; i++) {
+            sum1 += weights[i];
+        }
+
+        // Calculate the sum of weights with index more than X
+        int sum2 = 0;
+        for (int i = X; i < N; i++) {
+            sum2 += weights[i];
+        }
+
+        // Update minimum absolute difference if necessary
+        min_diff = min(min_diff, abs(sum1 - sum2));
+    }
+
+    // Output the minimum absolute difference
+    cout << min_diff << endl;
+
+    return 0;
+}
