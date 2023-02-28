@@ -1,0 +1,31 @@
+#include<bits/stdc++.h> 
+using namespace std;
+
+int N, M;
+const int mod = 1000000007;
+unordered_set<int> hs;
+unordered_map<int, int> dp;
+
+int main() {
+    cin >> N >> M;
+
+    for (int i = 0; i < M; i++) {
+        int val;
+        cin >> val;
+        hs.insert(val);
+    }
+
+    dp[0] = 1;
+    if (hs.count(1) == 0) {
+        dp[1] = 1;
+    }
+
+    for (int i = 2; i <= N; i++) {
+        if (hs.count(i) == 0) {
+            dp[i] = (dp[i-1] + dp[i-2]) % mod;
+        }
+    }
+
+    cout << dp[N] << endl;
+    return 0;
+}
