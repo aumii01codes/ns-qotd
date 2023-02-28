@@ -1,0 +1,11 @@
+#include <bits/stdc++.h> // header file includes every Standard library
+using namespace std;
+
+int main() {
+	// Your code here
+    int a, res;
+    cin>>a;
+    res= a+ (a*a) + (a*a*a);
+    cout<<res;
+    return 0;
+}
