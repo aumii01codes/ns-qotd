@@ -1,0 +1,14 @@
+#include <bits/stdc++.h> // header file includes every Standard library
+using namespace std;
+
+int main() {
+
+int x, y, n;
+cin>>x>>y;
+
+for (n=y-x+1; n<x+y; n++) {
+    cout<<n<<" ";
+    }
+    
+    return 0;
+}
