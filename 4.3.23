@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int a, b;
+    cin>>a>>b;
+    
+/* since dice is thrown a times,
+and has 6 faces,
+the maximum possible value we can get is 6*a */
+
+    int sum=6*a;
+    if (b>sum || b<a) cout<<"No";
+    else cout<<"Yes";
+    return 0;
+}
