@@ -1,0 +1,15 @@
+#include <bits/stdc++.h> // header file includes every Standard library
+using namespace std;
+
+int main() {
+	int k, a, b;
+    cin >> k >> a >> b;
+
+    int multiple = k * ((a + k - 1) / k);
+    if (multiple <= b) {
+        cout << "OK";
+    } else {
+        cout << "NG";
+    }
+    return 0;
+}
