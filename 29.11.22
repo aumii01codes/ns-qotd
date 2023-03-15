@@ -1,0 +1,19 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+    int n;
+    cin >> n;
+    string prev_word;
+    unordered_set<string> seen_words;
+    cin >> prev_word;
+    seen_words.insert(prev_word);
+    for (string curr_word; cin >> curr_word; prev_word = curr_word) {
+        if (prev_word.back() != curr_word.front() || seen_words.count(curr_word)) {
+            cout << "No\n";
+            return 0;
+        }
+        seen_words.insert(curr_word);
+    }
+    cout << "Yes\n";
+    return 0;
+}
