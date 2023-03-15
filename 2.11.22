@@ -1,0 +1,12 @@
+#include <iostream>
+using namespace std;
+int main() {
+    long long x;
+    double y;
+    cin >> x >> y;
+    y *= 100; //removing decimal
+    long long y1 = (long long)y; //typecasting
+    long long pro = (x * y1)/100; // Calculate product and truncate decimal part
+    cout<<pro;
+    return 0;
+}
