@@ -1,0 +1,11 @@
+#include <bits/stdc++.h> // header file includes every Standard library
+using namespace std;
+int main() {
+	long long int n, a, b;
+    cin>>n>>a>>b;
+    long long int pairs = n / (a + b);
+    long long int left_out = min(n % (a + b), a);
+    long long int total_blue = pairs*a + left_out;
+    cout<<total_blue;
+    return 0;
+}
