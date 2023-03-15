@@ -1,5 +1,5 @@
 # 💫 About Me:
-Hello! My name is Saumili Dutta, an undergraduate sophomore student pursuing software development, interested in front end web development. I'm always open to learning new topics and technologies.<br>
+Hello! My name is Saumili Dutta, an undergraduate sophomore student pursuing software development, interested in front end development. I'm always open to learning new topics and technologies.<br>
 
 
 ## 🌐 Socials:
