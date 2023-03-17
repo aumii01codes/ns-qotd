@@ -1,0 +1,36 @@
+#include <bits/stdc++.h> // header file includes every Standard library
+using namespace std;
+
+bool checkPalindrome(string str, int l, int r) {
+    while (l < r) {
+        if (str[l] != str[r]) {
+            return false;
+        }
+        l++;
+        r--;
+    }
+    return true;
+}
+
+bool helper(string str, int l, int r) {
+    while (l < r) {
+        if (str[l] == 'a' && str[r] == 'a') {
+            l++;
+            r--;
+        }
+        else break;
+    }
+    while (l < r && str[r] == 'a') {
+        r--;
+    }
+    return checkPalindrome(str, l, r);
+}
+
+int main() {
+    string str;
+    cin >> str;
+    bool result = helper(str, 0, str.length() - 1);
+    if (result) cout << "Yes";
+    else cout << "No";
+    return 0;
+}
