@@ -1,0 +1,39 @@
+#include <bits/stdc++.h> // header file includes every Standard library
+using namespace std;
+int main() {
+int n;
+    cin >> n;
+    vector<int> a(n);
+    for (int i = 0; i < n; i++) {
+        cin >> a[i];
+    }
+    int ans = 1e9; // initialize the answer to a large value
+    for (int i = 0; i < (1 << n); i++) { // iterate over all possible subsets of intervals
+        vector<int> ors; // store the bitwise OR of the numbers in each interval
+        int prev = 0;
+        for (int j = 0; j < n; j++) {
+            if (i & (1 << j)) { // if the j-th interval is selected
+                int cur = 0;
+                for (int k = prev; k <= j; k++) {
+                    cur |= a[k]; // compute the bitwise OR of the numbers in the j-th interval
+                }
+                ors.push_back(cur);
+                prev = j + 1;
+            }
+        }
+        if (prev < n) { // handle the last interval
+            int cur = 0;
+            for (int k = prev; k < n; k++) {
+                cur |= a[k];
+            }
+            ors.push_back(cur);
+        }
+        int xorsum = 0;
+        for (int o : ors) {
+            xorsum ^= o; // compute the bitwise XOR of the values obtained in each interval
+        }
+        ans = min(ans, xorsum); // update the answer if necessary
+    }
+    cout << ans << endl;
+    return 0;
+}
