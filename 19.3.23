@@ -1,0 +1,12 @@
+#include <bits/stdc++.h> // header file includes every Standard library
+using namespace std;
+int main() {
+	string a, b;
+    cin>>a>>b;
+    string c=a+b; //concatenate string
+    int d= stoi(c); // convert string to integer
+    int sq_rt= sqrt(d); //storing the sqrt value in integer
+    if (sq_rt*sq_rt==d) cout<<"Yes"; //if it is a perfect square, then product of its square root should be equal to the square
+    else cout<<"No";
+    return 0;
+}
