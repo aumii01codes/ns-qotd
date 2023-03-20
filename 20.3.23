@@ -1,0 +1,14 @@
+#include <bits/stdc++.h> // header file includes every Standard library
+using namespace std;
+int main() {
+	int n, i;
+    cin>>n;
+    set<string> s1;
+    for (i=0; i<n; i++) {
+        string s;
+        cin>>s;
+        s1.insert(s);
+    }
+    cout << s1.size();
+    return 0;
+}
