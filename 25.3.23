@@ -1,0 +1,9 @@
+#include <bits/stdc++.h> // header file includes every Standard library
+using namespace std;
+int main() {
+	int x, u, l;
+    cin>>u>>l>>x;
+    if (x<u && x>l) cout<<"Yes";
+    else cout<<"No";
+    return 0;
+}
