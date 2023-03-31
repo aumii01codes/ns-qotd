@@ -1,0 +1,15 @@
+#include <bits/stdc++.h> // header file includes every Standard library
+using namespace std;
+int main() {
+    int i;
+    int vo=0, co=0;
+	string s;
+    cin>>s;
+    for (i=0; i<s.size(); i++){
+        if (s[i]=='a' || s[i]=='e' || s[i]=='i' || s[i]=='o' || s[i]=='u') vo++;
+        else co++;
+    }
+    if (co==vo) cout<<"Yes";
+    else cout<<"No";
+    return 0;
+}
